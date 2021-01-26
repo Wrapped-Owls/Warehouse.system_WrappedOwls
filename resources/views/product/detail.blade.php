@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page-title', 'Detalhes do produto')
+@section('page-title', 'Product Details')
 
 @section('content-header')
 	<link href="{{ asset('css/main.css') }}" rel="stylesheet">
@@ -36,13 +36,13 @@
 					<form class="contact100-form validate-form" action="{{ route('product.detail',$data['id']) }}">
 						@csrf
 						<span class="contact100-form-title">
-                    Detalhes do produto
+                    Product Details
                 </span>
 
 
 						<div class="wrap-input100 validate-input" data-validate="Name is required">
 							@if(!$data['image'])
-								<p>O produto nao possui imagem associada</p>
+								<p>The product has no associated image</p>
 							@else
 								<img src="{{$data['image']}}" class="input100" alt="Responsive image">
 							@endif
@@ -61,7 +61,7 @@
 							<span class="focus-input100-1"></span>
 							<span class="focus-input100-2"></span>
 						</div>
-						<label for="price"><b>{{ __('Descrição') }}</b></label>
+						<label for="price"><b>{{ __('Description') }}</b></label>
 						<div class="wrap-input100 validate-input" data-validate="Message is required">
 							<label id="material_description" type="text" class="{{ $errors->has('material_description') ? ' is-invalid' : '' }}" name="material_description" value="{{ $data['description']}}" required>{{ $data['description']}}</label>
 
@@ -73,7 +73,7 @@
 							<span class="focus-input100-1"></span>
 							<span class="focus-input100-2"></span>
 						</div>
-						<label for="price"><b>{{ __('Preço (R$)') }}</b></label>
+						<label for="price"><b>{{ __('Price ($)') }}</b></label>
 						<div class="wrap-input100 validate-input" data-validate="Name is required">
 							<label id="price" type="number" class="{{ $errors->has('price') ? ' is-invalid' : '' }}" name="price" value="{{ $data['price'] }}" required>{{ $data['price'] }}</label>
 
@@ -88,12 +88,12 @@
 						<div class="row">
 						<div class="col-md-6 container-contact100-form-btn">
 							<a href="{{route('product.index')}}" class="contact100-form-btn">
-								Voltar
+								Back
 							</a>
 						</div>
 							<div class="col-md-6 container-contact100-form-btn">
 								<a href="{{route('baixarqr',$data['id'])}}" class="contact100-form-btn">
-									Baixar QrCode
+									Download QrCode
 								</a>
 							</div>
 						</div>

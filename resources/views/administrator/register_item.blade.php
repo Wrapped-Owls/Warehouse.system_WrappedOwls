@@ -1,7 +1,7 @@
 @if((Auth::user()->access_level) >=2)
     @extends('layouts.app')
 
-    @section('page-title', 'Associar produto')
+    @section('page-title', 'Associate product')
 
 @section('content-header')
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
@@ -37,13 +37,13 @@
                           action="{{ action('ItemController@store') }}">
                         @csrf
                         <span class="contact100-form-title">
-                    Associar produto
+                    Associate product
                 </span>
                         <div class="wrap-input100 validate-input" data-validate="Name is required">
                             <select id="product" type="text"
                                     class="form-control{{ $errors->has('product') ? ' is-invalid' : '' }}"
                                     name="product" value="{{ old('product') }}" required autofocus>
-                                <option value="0" disabled selected>Selecione um produto</option>
+                                <option value="0" disabled selected>Select a product</option>
                                 @foreach($products as $product)
                                     <option value="{{ $product->code_product }}">{{ $product->name }}</option>
                                 @endforeach
@@ -62,7 +62,7 @@
                             <select id="area" type="text"
                                     class="form-control{{ $errors->has('area') ? ' is-invalid' : '' }}" name="area"
                                     value="{{ old('area') }}" required>
-                                <option disabled selected>Selecione uma área</option>
+                                <option disabled selected>Select an area</option>
                                 @foreach($areas as $area)
                                     <option value="{{ $area->code_area }}">{{ $area->name }}</option>
                                 @endforeach
@@ -80,7 +80,7 @@
                             <input id="total_inside" type="number" min="1"
                                    class="form-control{{ $errors->has('total_inside') ? ' is-invalid' : '' }}"
                                    name="total_inside" value="{{ old('total_inside') }}" required
-                                   placeholder="Quantidade">
+                                   placeholder="Amount">
 
                             @if ($errors->has('total_inside'))
                                 <span class="invalid-feedback" role="alert">
@@ -97,7 +97,7 @@
                         @endif
                         <div class="container-contact100-form-btn">
                             <button type="submit" class="contact100-form-btn">
-                                Associar
+                                Connect
                             </button>
                         </div>
                     </form>

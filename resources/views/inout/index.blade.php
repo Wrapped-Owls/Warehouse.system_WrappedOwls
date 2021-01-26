@@ -16,18 +16,18 @@
             @endif
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
                 <p>
-                <h1 align="center" class="page-header">Itens SGDA</h1></p><br>
+                <h1 align="center" class="page-header">Items Warehouse_system</h1></p><br>
                 <div class="table-responsive">
                     <table class="table table-striped">
                         <thead class="thead-light">
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Produto</th>
-                            <th scope="col">Área</th>
-                            @if(auth()->user()->access_level == 0)
-                                <th scope="col">Quantidade a ser Solicitada</th></th>
+                            <th scope="col"> #</th>
+                            <th scope="col"> Product</th>
+                            <th scope="col"> Area</th>
+                            @if (auth()->user()->access_level == 0)
+                                <th scope="col"> Quantity to be ordered</th> </th>
                             @else
-                                <th scope="col">Quantidade</th>
+                                <th scope="col"> Quantity</th>
                             @endif
                         </tr>
                         </thead>
@@ -53,9 +53,9 @@
                                             </span>
                                             @endif
                                             <button type="submit" class="btn btn-primary">
-                                                {{ __('Atualizar estoque') }}
+                                                {{ __('Update inventory') }}
                                             </button>
-                                            <a href="{{route('inout.edit', $item->code_item)}}" class="btn btn-success">Tranferir
+                                            <a href="{{route('inout.edit', $item->code_item)}}" class="btn btn-success">Transfer
                                             </a>
                                         </form>
                                     </td>
@@ -69,7 +69,7 @@
                         </tbody>
                     </table>
                 </div>
-                 {!! $items->links() !!}
+                {!! $items->links() !!}
             </div>
         </div>
     </div>

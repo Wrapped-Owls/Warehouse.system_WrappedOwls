@@ -2,7 +2,7 @@
 
     @extends('layouts.app')
 
-    @section('page-title', 'Resultado da busca')
+    @section('page-title', 'Search result')
 
 @section('content-header')
     <link href="{{ asset('css/administrator_dashboard.css') }}" rel="stylesheet">
@@ -22,10 +22,11 @@
                 <div class="row justify-content-center">
                     <div class="container-contact100">
                         <div class="wrap-contact100">
-                            <form class="contact100-form validate-form" enctype="multipart/form-data" action="{{ url('/home') }}">
+                            <form class="contact100-form validate-form" enctype="multipart/form-data"
+                                  action="{{ url('/home') }}">
                                 @csrf
                                 <h2 align="center"><span class="contact100-form-title">
-                                    Resultado não encontrado
+                                    Result not found
                                 </span></h2>
 
                                 <div>
@@ -36,7 +37,7 @@
 
                                 <div class="container-contact100-form-btn">
                                     <button type="submit" class="contact100-form-btn">
-                                        Voltar
+                                        Back
                                     </button>
                                 </div>
                             </form>

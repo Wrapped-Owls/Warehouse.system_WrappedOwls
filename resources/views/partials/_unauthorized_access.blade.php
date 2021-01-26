@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page-title', 'Acesso negado')
+@section('page-title', 'Access denied')
 
 @section('content-header')
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
@@ -34,7 +34,7 @@
                           action="{{ url('/home') }}">
                         @csrf
                         <h2 align="center"><span class="contact100-form-title">
-                            Acesso negado
+                            Access denied
                         </span></h2>
 
                         <div>
@@ -45,7 +45,7 @@
 
                         <div class="container-contact100-form-btn">
                             <button type="submit" class="contact100-form-btn">
-                                Voltar
+                                Back
                             </button>
                         </div>
                     </form>

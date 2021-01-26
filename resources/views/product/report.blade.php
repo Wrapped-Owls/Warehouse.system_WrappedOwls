@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Report</title>
 <body>
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <h1 class="page-header">Relatorio de Produtos</h1>
+            <h1 class="page-header">Product Report</h1>
             <table class="table">
                 <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Código Qr</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Descrição</th>
-                    <th scope="col">Quantidade</th>
-                    <th scope="col">Valor Atual</th>
-                    <th scope="col">Valor Anterior</th>
-                    <th scope="col">Diferença entre valores</th>
+                    <th scope="col">Qr code</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Current Value</th>
+                    <th scope="col">Previous Value</th>
+                    <th scope="col">Difference between values</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -35,11 +36,11 @@
                         <td>{{$product->item()->sum('total_inside')}}</td>
                         <td> R$ {{$product->price}}</td>
                         @if(isset($product->previous_price))
-                            <td> R$ {{$product->previous_price}}</td>
+                            <td>$ {{$product->previous_price}}</td>
                         @else
-                            <td> R$ 0,00</td>
+                            <td>$ 0,00</td>
                         @endif
-                        <td> R$ {{$product->price - $product->previous_price}}</td>
+                        <td>$ {{$product->price - $product->previous_price}}</td>
 
                         <td></td>
                     </tr>
@@ -51,14 +52,14 @@
     </div>
 
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-        <h1 class="page-header">Produtos Parados</h1>
+        <h1 class="page-header">Stopped Products</h1>
         <table class="table">
             <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Descrição</th>
-                <th scope="col">Situaçao</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Situation</th>
             </tr>
             </thead>
             <tbody>
@@ -75,7 +76,7 @@
                     @elseif($product[1]->y>1)
                         <td>{{$product[1]->format('Parado por %y anos, %m meses e %d dias')}}</td>
                     @else
-                        <td>Nunca foi requisitado</td>
+                        <td>Never been requested</td>
                     @endif
 
                     <td></td>
@@ -85,7 +86,6 @@
         </table>
 
     </div>
-</div>
 </div>
 </body>
 </html>

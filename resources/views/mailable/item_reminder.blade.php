@@ -1,13 +1,15 @@
-<h1>Lembre-se de Devolver o Produto ao Almoxarifado</h1>
+<h1>Remember to return the product to the warehouse</h1>
 
 <p>
 	<?php
-	if (isset($inout)) {
-		$itemRequest = \App\Models\ItemRequest::find($inout->code_request);
-        $quantity = $itemRequest->quantity;
-        $item = \App\Models\Item::find($itemRequest->code_item);
-        $product = \App\Models\Product::find($item->code_product);
+	use App\Models\Item;use App\Models\Product;use App\Models\ItemRequest;
+	if(isset($inout)) {
+		$itemRequest = ItemRequest::find($inout->code_request);
+		$quantity = $itemRequest->quantity;
+		$item = Item::find($itemRequest->code_item);
+		$product = Product::find($item->code_product);
 	}
 	?>
-    Você realizou remoção de {{ $quantity }} {{ $product->name }} do almoxarifado, por favor lembre-se de devolvê-los até o dia {{ $itemRequest->return_date }}
+    You have removed {{$quantity}} {{$product->name}} from the warehouse, please remember to return them
+    until {{$itemRequest->return_date}}
 </p>

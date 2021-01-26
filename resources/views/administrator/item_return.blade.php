@@ -13,15 +13,17 @@
         <div class="row">
             @include('administrator.sidebar')
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                <p><h1 align="center" class="page-header">Devoluções SGDA</h1></p><br>
+                <p>
+                <h1 align="center" class="page-header">Returns Warehouse_system</h1>
+                </p><br>
                 <div class="table-responsive">
                     <table class="table table-striped">
                         <thead class="thead-light">
                         <tr>
-                            <th>Quantidade Retornada</th>
+                            <th>Returned Quantity</th>
                             <th>Item</th>
-                            <th>Usuário</th>
-                            <th>Ações</th>
+                            <th>User</th>
+                            <th>Actions</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -34,7 +36,8 @@
                                     <td>{{$request->name}}</td>
                                     <td>{{$request->email}}</td>
                                     <td>
-                                        <a href="{{route('receive_item', $request->code_inout)}}" class="btn btn-success">Receber</a>
+                                        <a href="{{route('receive_item', $request->code_inout)}}"
+                                           class="btn btn-success">Receive</a>
                                     </td>
                                 </tr>
                             @endforeach

@@ -6,11 +6,11 @@
 
 -   [Composer](https://getcomposer.org/) - Dependency Manager
 
--   [PHP](http://php.net/downloads.php) - rrogramming Language
+-   [PHP](http://php.net/downloads.php) - programming Language
 
 ### Download the project from the GitHub repository (Must have git installed)
 
-<pre>git clone https://github.com/Jictyvoo/Warehouse.system_WrappedOlws.git</pre>
+<pre>git clone https://github.com/Jictyvoo/Warehouse.system_WrappedOwls.git</pre>
 
 ### Copy the .env.example file to .env
 

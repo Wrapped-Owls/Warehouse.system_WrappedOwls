@@ -8,11 +8,11 @@
         <div class="sidebar-links">
             <div class="link-blue">
                 <a href="#">
-                    <i class="fa fa-keyboard-o"></i>Ações
+                    <i class="fa fa-keyboard-o"></i>Actions
                 </a>
                 <ul class="sub-links">
-                    <li><a href="{{ route('changeData.index') }}">Editar perfil</a></li>
-                    <li><a href="{{ route('item.index') }}">Solicitar item</a></li>
+                    <li><a href="{{ route('changeData.index') }}">Edit profile</a></li>
+                    <li><a href="{{ route('item.index') }}">Request item</a></li>
                 </ul>
             </div>
         </div>

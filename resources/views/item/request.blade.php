@@ -1,6 +1,6 @@
-@section('page-title', 'Solicitar Item')
+@section('page-title', 'Request Item')
 
-<form method="POST" action="{{ action('ItemRequestController@store') }}" aria-label="{{ __('Solicitar Item') }}">
+<form method="POST" action="{{ action('ItemRequestController@store') }}" aria-label="{{ __('Request Item') }}">
     @csrf
     <input id="code_item" type="hidden" class="form-control{{ $errors->has('code_item') ? ' is-invalid' : '' }}"
            name="code_item" value="{{ $data['code_item']}}" required>
@@ -30,7 +30,7 @@
         </div>
         <div class="col-md-4 offset-md-1">
             <button type="submit" class="btn btn-primary">
-                {{ __('Solicitar Item') }}
+                {{ __('Request Item') }}
             </button>
         </div>
     </div>

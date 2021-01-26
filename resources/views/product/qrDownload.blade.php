@@ -9,15 +9,12 @@
     <div class="row">
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
-    @foreach($relation as $key=>$value)
-
+            @foreach($relation as $key=>$value)
                 <h1 class="page-header">{{$value[1]->name}}</h1>
-
-        @foreach(range(0,$value[0]-1) as $i)
-
-        <img src="data:image/png;base64,{!!  base64_encode(QrCode::format('png')->size(100)->generate(route("main") . "/product/{$key}/detail")); !!}"/>
-        @endforeach
-    @endforeach
+                @foreach(range(0,$value[0]-1) as $i)
+                    <img src="data:image/png;base64,{!!  base64_encode(QrCode::format('png')->size(100)->generate(route("main") . "/product/{$key}/detail")); !!}"/>
+                @endforeach
+            @endforeach
         </div>
     </div>
 

@@ -34,18 +34,20 @@
             <div class="container-contact100">
 
                 <div class="wrap-contact100">
-                    <form class="contact100-form validate-form" method="POST" action="{{ route('user.update',$user->id) }}">
+                    <form class="contact100-form validate-form" method="POST"
+                          action="{{ route('user.update',$user->id) }}">
                         {{ csrf_field() }}
                         {{ method_field('PUT')}}
                         @csrf
                         <span class="contact100-form-title">
-                    Editar usuario
+                    Edit user
                 </span>
 
                         <label for="name" class="input100"><h5>Nome</h5></label>
 
                         <div class="wrap-input100 validate-input" data-validate="Name is required">
-                            <input id="name" type="text" class="input100{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ $user->name}}" required autofocus>
+                            <input id="name" type="text" class="input100{{ $errors->has('name') ? ' is-invalid' : '' }}"
+                                   name="name" value="{{ $user->name}}" required autofocus>
 
                             @if ($errors->has('name'))
                                 <span class="invalid-feedback" role="alert">
@@ -58,7 +60,9 @@
                         <label for="name" class="input100"><h5>Email</h5></label>
 
                         <div class="wrap-input100 validate-input" data-validate="Email is required">
-                            <input id="email" type="email" class="input100{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{$user->email}}" required autofocus>
+                            <input id="email" type="email"
+                                   class="input100{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email"
+                                   value="{{$user->email}}" required autofocus>
 
                             @if ($errors->has('email'))
                                 <span class="invalid-feedback" role="alert">
@@ -71,22 +75,35 @@
 
                         <div class="wrap-input100 validate-input" data-validate="Access Level is required">
                             <table>
-                                <tr><td><input id="accessLevel" {{$user->access_level == 0 ? 'checked' : ''}} type="radio" class="form-group" name="accessLevel" value="0"> 1 - Colaborador</td></tr>
-                                <tr><td><input id="accessLevel" {{$user->access_level == 1 ? 'checked' : ''}} type="radio" class="form-group" name="accessLevel" value="1"> 2 - Docente Coordenador</td></tr>
-                                <tr><td><input id="accessLevel" {{$user->access_level == 3 ? 'checked' : ''}} type="radio" class="form-group" name="accessLevel" value="3"> 3 - Administrador SGDA</td></tr><br>
+                                <tr>
+                                    <td><input id="accessLevel"
+                                               {{$user->access_level == 0 ? 'checked' : ''}} type="radio"
+                                               class="form-group" name="accessLevel" value="0"> 1 - Collaborator
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input id="accessLevel"
+                                               {{$user->access_level == 1 ? 'checked' : ''}} type="radio"
+                                               class="form-group" name="accessLevel" value="1"> 2 - Coordinating Teacher
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input id="accessLevel"
+                                               {{$user->access_level == 3 ? 'checked' : ''}} type="radio"
+                                               class="form-group" name="accessLevel" value="3"> 3 - Administrator
+                                        Warehouse_system
+                                    </td>
+                                </tr>
+                                <br>
                             </table>
                             <span class="focus-input100-1"></span>
                             <span class="focus-input100-2"></span>
                         </div>
 
 
-
-
-
-
                         <div class="container-contact100-form-btn">
                             <button type="submit" class="contact100-form-btn">
-                                Editar
+                                Edit
                             </button>
                         </div>
                     </form>

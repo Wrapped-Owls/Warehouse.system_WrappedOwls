@@ -10,7 +10,7 @@
             <form action="{{ route('search') }}" method="GET">
                 <div class="d-flex search-location h-100">
                     <div class="searchbar">
-                        <input class="search_input" type="text" name="productName" placeholder="Pesquisar...">
+                        <input class="search_input" type="text" name="productName" placeholder="Search...">
                         <button href="#" class="search_icon" type="submit"><i class="fas fa-search"></i></button>
                     </div>
                 </div>

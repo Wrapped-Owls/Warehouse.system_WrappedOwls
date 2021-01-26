@@ -59,9 +59,9 @@
                             <thead class="thead-light">
                             <tr>
                                 <th>#</th>
-                                <th>Nome</th>
-                                <th>Descrição</th>
-                                <th>Ação</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>

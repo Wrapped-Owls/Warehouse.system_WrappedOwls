@@ -1,7 +1,7 @@
 @if((Auth::user()->access_level) >=2)
     @extends('layouts.app')
 
-    @section('page-title', 'Registrar área')
+    @section('page-title', 'Register area')
 
 @section('content-header')
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
@@ -37,7 +37,7 @@
                           action="{{ action('AreaController@store') }}">
                         @csrf
                         <span class="contact100-form-title">
-                    Registrar área
+                    Register area
                 </span>
                         <div class="wrap-input100 validate-input" data-validate="Name is required">
                             <input id="name" type="text" class="input100{{ $errors->has('name') ? ' is-invalid' : '' }}"
@@ -54,7 +54,7 @@
 
                         <div class="container-contact100-form-btn">
                             <button type="submit" class="contact100-form-btn">
-                                Registrar
+                                Register
                             </button>
                         </div>
                     </form>
