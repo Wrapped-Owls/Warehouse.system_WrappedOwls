@@ -36,7 +36,7 @@
 
                 <div class="wrap-contact100">
                     <form class="contact100-form validate-form" enctype="multipart/form-data" method="POST"
-                          action="{{ action('ProductController@store') }}"
+                          action="{{ action('App\Http\Controllers\ProductController@store') }}"
                           aria-label="{{ __('Register Product') }}">
                         @csrf
                         <span class="contact100-form-title">Register Product</span>
